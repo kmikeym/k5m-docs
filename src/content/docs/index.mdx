@@ -1,40 +1,42 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Welcome to K5M Documentation
+description: Your guide to K5M projects, tools, and best practices
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: Comprehensive documentation for K5M projects and tools
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Quick Start
+      link: /guides/quickstart/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: View Projects
+      link: /projects/water-tracker/
+      icon: rocket
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Featured Projects
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Water Tracker" icon="star">
+		Local-first hydration tracking with web, desktop, and CLI interfaces.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Privacy First" icon="shield">
+		All K5M projects keep your data on your device - no cloud required.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Multiple Interfaces" icon="laptop">
+		Use web apps, desktop applications, or CLI tools - your choice.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Open Source" icon="github">
+		View source code and contribute on GitHub.
 	</Card>
 </CardGrid>
+
+## About K5M
+
+K5M is focused on building efficient, local-first applications and tools. Our projects prioritize:
+
+- **Privacy**: Your data stays on your device
+- **Performance**: Fast, lightweight applications
+- **Simplicity**: Easy to use, easy to understand
+- **Open Source**: Transparent and community-driven

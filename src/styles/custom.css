@@ -1,0 +1,42 @@
+/* K5M Documentation Custom Styles */
+
+:root {
+	--sl-color-accent-low: #1e3a5f;
+	--sl-color-accent: #4A90E2;
+	--sl-color-accent-high: #6ba3e8;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eceef2;
+	--sl-color-gray-2: #c2c6cc;
+	--sl-color-gray-3: #8b92a0;
+	--sl-color-gray-4: #5a6270;
+	--sl-color-gray-5: #3c4350;
+	--sl-color-gray-6: #24272f;
+	--sl-color-black: #17181c;
+}
+
+/* Dark mode overrides */
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #1a2d44;
+	--sl-color-accent: #4A90E2;
+	--sl-color-accent-high: #6ba3e8;
+	--sl-color-gray-1: #2c3039;
+	--sl-color-gray-2: #3c4350;
+	--sl-color-gray-3: #5a6270;
+	--sl-color-gray-4: #8b92a0;
+	--sl-color-gray-5: #c2c6cc;
+	--sl-color-gray-6: #eceef2;
+}
+
+/* Custom footer */
+.footer {
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--sl-color-gray-5);
+	text-align: center;
+	font-size: 0.875rem;
+	color: var(--sl-color-gray-3);
+}
+
+.footer strong {
+	color: var(--sl-color-accent);
+}
