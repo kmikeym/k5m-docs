@@ -1,227 +1,205 @@
 ---
 title: VibeCode Platform
-description: No-code/low-code rapid application development platform
+description: No-code/low-code rapid application development
 ---
 
 # VibeCode Platform
 
-A no-code/low-code platform for rapid application development, forked from the open-source vibes.diy project.
+**Live at**: https://vibecode.quarterly.systems
 
-## Overview
+Build functional applications without writing code. VibeCode turns ideas into working prototypes through intuitive visual development.
 
-- **URL**: https://vibecode.quarterly.systems
-- **Tech**: React, TypeScript, Fireproof, pnpm monorepo
-- **Upstream**: https://github.com/VibesDIY/vibes.diy
-- **Public Demo**: https://vibes.diy
-- **Status**: Beta
+## What It Does
 
-## Features
+VibeCode is an experimental no-code/low-code platform that lets you create applications by describing what you want, not how to build it. It combines visual development with AI assistance to accelerate the journey from concept to working software.
 
-### No-Code/Low-Code Development
-- Visual application builder
-- Drag-and-drop interface
-- Rapid prototyping
-- Real-time preview
+Think of it as business-grade vibe coding - transforming ideas into systems through intuitive frameworks instead of traditional programming.
 
-### Fireproof Database
-- Local-first data storage
-- Automatic synchronization
-- Offline-first architecture
-- Built-in encryption
+## Who It's For
 
-### Monorepo Architecture
-Multiple packages:
-- `vibes.diy` - Core platform
-- `call-ai` - AI integration
-- `use-vibes` - React hooks
-- `prompts` - Prompt templates
+- **Non-technical founders** who want to prototype products
+- **Product managers** testing ideas before investing in development
+- **Designers** creating interactive prototypes
+- **Developers** who want rapid prototyping for client demos
+- **Entrepreneurs** validating business concepts quickly
 
-## Installation
+## How to Use It
 
-```bash
-# Clone the repository
-git clone [repository-url]
+### Getting Started
 
-# Navigate to the project
-cd vibecoder
+1. Visit https://vibecode.quarterly.systems
+2. Start with a blank project or template
+3. Describe what you want to build
+4. Watch VibeCode generate the foundation
+5. Refine and customize through the visual interface
 
-# Install dependencies (uses pnpm)
-pnpm install
-```
+### Building Applications
 
-## Development
+**Visual Development**
+- Drag and drop components
+- Configure behavior without code
+- See changes in real-time
+- Test as you build
 
-### Start Dev Server
+**AI Assistance**
+- Describe features in plain language
+- Get component suggestions
+- Auto-generate common patterns
+- Refine through conversation
 
-```bash
-pnpm dev
-```
+**Local-First Data**
+- Built on Fireproof database
+- Works offline automatically
+- Syncs when connected
+- Your data stays private
 
-### Run All Checks
+## What You Can Build
 
-Before committing, run the full check suite:
+### Business Applications
+- Internal dashboards
+- Data collection forms
+- Admin panels
+- Workflow tools
 
-```bash
-pnpm check
-```
+### Prototypes & MVPs
+- Product demos
+- Client presentations
+- User testing versions
+- Concept validation
 
-This runs:
-- Format checking
-- Build process
-- Tests
-- Linting
+### Personal Projects
+- Habit trackers
+- Personal dashboards
+- Collection managers
+- Learning tools
 
-## Code Standards
+## Best Practices
 
-### TypeScript Requirements
-- **Strict TypeScript**: No `any` types allowed
-- Full type coverage
-- Type-safe APIs
-- Comprehensive type definitions
+### Starting a Project
+- **Start simple** - Build core functionality first
+- **Test early** - Validate ideas before adding complexity
+- **Iterate fast** - Make changes, test, repeat
+- **Don't over-engineer** - Perfect is the enemy of done
 
-### Best Practices
-- See `vibecoder/CLAUDE.md` for detailed practices
-- Follow React best practices
-- Use functional components
-- Implement proper error handling
+### Working with AI
+- **Be specific** - "Add a task list" vs "Add productivity features"
+- **Iterate** - Refine suggestions through follow-ups
+- **Review output** - AI helps, but you decide
+- **Learn patterns** - Understand what works for reuse
 
-## Monorepo Structure
+### Building for Users
+- **Focus on workflow** - How will people actually use this?
+- **Keep it simple** - Fewer features done well beats many done poorly
+- **Get feedback early** - Show real users ASAP
+- **Iterate based on use** - Watch how people interact
 
-```
-vibecoder/
-├── packages/
-│   ├── vibes.diy/     # Core platform
-│   ├── call-ai/       # AI integration
-│   ├── use-vibes/     # React hooks
-│   └── prompts/       # Prompt templates
-├── .github/           # CI/CD workflows
-└── package.json       # Monorepo config
-```
+## Common Questions
 
-## Deployment
+**Do I need to know how to code?**
+No! That's the point. You describe what you want, and VibeCode helps you build it.
 
-Deployment is handled by GitHub Actions on tag push:
+**What if I DO know how to code?**
+Even better - you can drop into code when needed, but use visual tools for speed.
 
-```bash
-# Create and push a tag
-git tag v1.0.0
-git push origin v1.0.0
-```
+**Is this production-ready?**
+VibeCode is in beta - great for prototypes and MVPs. For production apps, consider migrating to traditional development.
 
-Deploys to Vercel/Netlify automatically.
+**What happens to my data?**
+Everything is local-first. Data stays on your device unless you explicitly sync it.
 
-## Upstream Synchronization
+**Can I export my project?**
+VibeCode projects are built on open standards. You own your code and data.
 
-This is a fork of vibes.diy and may need periodic syncing:
+**How is this different from other no-code tools?**
+VibeCode focuses on rapid iteration and AI-assisted development rather than template-based building.
 
-```bash
-# Add upstream remote (once)
-git remote add upstream https://github.com/VibesDIY/vibes.diy
+## Tips & Tricks
 
-# Fetch upstream changes
-git fetch upstream
+### Rapid Prototyping
+- Build the happy path first
+- Skip edge cases initially
+- Use placeholder data
+- Focus on user experience
 
-# Merge upstream changes
-git merge upstream/main
-```
+### Validation Workflow
+1. Build minimum testable version (1-2 days)
+2. Show 5 real users
+3. Collect feedback
+4. Iterate or pivot
+5. Repeat
 
-## Key Features
+### When to Move to Code
+- You've validated product-market fit
+- Need custom integrations
+- Performance becomes critical
+- Team grows beyond early stage
 
-### AI Integration
-- Built-in AI capabilities via `call-ai` package
-- Prompt management
-- AI-assisted development
-- Smart code generation
+### Collaboration
+- Share projects for feedback
+- Iterate based on live demos
+- Use it for client presentations
+- Prototype before writing specs
 
-### React Hooks
-- Custom hooks in `use-vibes` package
-- Reusable logic
-- State management
-- Side effects handling
+## Learning Path
 
-### Local-First Architecture
-- Fireproof database
-- Offline functionality
-- Automatic sync when online
-- No server required for basic usage
+**Week 1**: Build simple apps
+- Todo list
+- Note taker
+- Contact manager
 
-## Development Workflow
+**Week 2**: Add complexity
+- Data relationships
+- Multi-screen flows
+- Basic logic
 
-1. **Make changes** in appropriate package
-2. **Test locally** with `pnpm dev`
-3. **Run checks** with `pnpm check`
-4. **Commit changes** following conventional commits
-5. **Push to main** or create PR
-6. **Tag for release** when ready to deploy
+**Week 3**: Polish
+- User experience
+- Error handling
+- Edge cases
 
-## Package Details
+**Week 4**: Real project
+- Solve actual problem
+- Get real feedback
+- Iterate based on use
 
-### vibes.diy
-Core platform with UI components and application logic.
+## Understanding Limitations
 
-### call-ai
-AI integration package for intelligent features:
-- LLM integration
-- Prompt management
-- Response handling
+**VibeCode is Great For:**
+- Prototypes and MVPs
+- Internal tools
+- Proof of concepts
+- Learning and experimentation
 
-### use-vibes
-React hooks for common patterns:
-- Data fetching
-- State management
-- Side effects
-- Custom hooks
+**Not Ideal For:**
+- Complex enterprise systems (yet)
+- High-performance applications
+- Systems requiring custom APIs
+- Mission-critical production apps
 
-### prompts
-Prompt templates and management:
-- Pre-built prompts
-- Prompt chaining
-- Template system
+**Sweet Spot:**
+- Validate ideas quickly
+- Build internal tools
+- Create demos and prototypes
+- Test product concepts
 
-## Contributing
+## Getting Help
 
-1. Read `vibecoder/CLAUDE.md` for detailed guidelines
-2. Use strict TypeScript (no `any`)
-3. Run `pnpm check` before committing
-4. Follow React best practices
-5. Write tests for new features
+**Stuck on something?**
+- Check the public demo at vibes.diy
+- Experiment with different prompts
+- Start over if needed - it's fast
+- Ask specific questions
 
-## Configuration
+**Found a bug?**
+VibeCode is in beta - bugs happen. Note what you were doing and try a workaround.
 
-Edit package-specific configuration files:
-- `tsconfig.json` - TypeScript settings
-- `vite.config.ts` - Build configuration
-- `.eslintrc` - Linting rules
-- `package.json` - Dependencies and scripts
-
-## Platform Capabilities
-
-### Application Types
-- Web applications
-- Mobile-responsive apps
-- Progressive Web Apps (PWAs)
-- Single Page Applications (SPAs)
-
-### Integration Options
-- API connections
-- Database integration
-- Third-party services
-- Custom backends
-
-## Future Development
-
-- Enhanced AI features
-- More UI components
-- Better templates
-- Improved documentation
-- Community plugins
-
-## Resources
-
-- **Upstream Project**: https://github.com/VibesDIY/vibes.diy
-- **Public Demo**: https://vibes.diy
-- **Documentation**: See individual package READMEs
+**Want a feature?**
+This is an experimental platform. Focus on what you can do today rather than what's missing.
 
 ---
+
+**Status**: Experimental Beta
+**Based on**: vibes.diy (open source)
+**Best for**: Rapid prototyping and MVPs
 
 a **K5M** company

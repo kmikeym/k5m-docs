@@ -1,213 +1,233 @@
 ---
-title: QuarterlyKB
-description: Knowledge base and documentation powered by Quartz
+title: QuarterlyKB (Knowledge Base)
+description: Centralized documentation and best practices
 ---
 
 # QuarterlyKB
 
-A digital garden knowledge base built with Quartz v4, featuring Obsidian-style markdown with bidirectional links and git-based versioning.
+**Live at**: https://base.quarterly.systems
 
-## Overview
+A living knowledge base for documentation, best practices, and institutional knowledge. Built as a digital garden that grows organically over time.
 
-- **URL**: https://base.quarterly.systems
-- **Tech**: Quartz v4, TypeScript, Preact
-- **Deploy**: Cloudflare Pages (auto-deploy on push to `v4` branch)
-- **Branch**: `v4` (default branch)
+## What It Does
 
-## Features
+QuarterlyKB is where we document everything - product guides, technical references, best practices, and team knowledge. Unlike traditional documentation that becomes outdated, this is a digital garden that's continuously updated and interconnected.
 
-### Obsidian-Style Markdown
-- Write content in `content/` directory
-- Use `[[Page Name]]` for internal linking
-- Full Obsidian compatibility
-- Markdown with frontmatter support
+Think of it as the team brain - searchable, linked, and always current.
 
-### Digital Garden
-- Git-based dating for pages
-- Automatic graph visualization
-- Backlinks and forward links
-- Tag-based navigation
+## Who It's For
 
-### Modern UI
-- IBM Plex Mono typography
-- Dark/light mode support
-- Responsive design
-- Fast static site generation
+- **Team members** looking for answers and context
+- **New hires** getting up to speed
+- **External users** learning our products
+- **Anyone** who needs documentation or guides
 
-## Installation
+## How to Use It
 
-```bash
-# Clone the repository
-git clone [repository-url]
+### Finding Information
 
-# Navigate to the project
-cd QuarterlyKB
+**Search**
+- Use the search bar at the top
+- Searches all content instantly
+- Highlights matches in context
 
-# Checkout v4 branch
-git checkout v4
+**Browse by Topic**
+- Navigate through categories
+- Use the sidebar to explore
+- Follow links between related pages
 
-# Install dependencies
-npm install
-```
+**Follow Connections**
+- Click `[[linked pages]]` to jump between related content
+- See backlinks to discover what references this page
+- Explore the knowledge graph visualization
 
-## Development
+### Reading Content
 
-### Build and Serve Locally
+**Page Structure**
+- Each page focuses on one topic
+- Links connect related concepts
+- Recent changes show at the bottom
+- Tags help you find related content
 
-```bash
-npx quartz build --serve
-```
+**Navigation**
+- Table of contents on the right
+- Breadcrumbs show where you are
+- Graph view shows connections
+- Search finds anything instantly
 
-This builds the site and starts a local server with hot reload.
+### Understanding the Garden
 
-### Build Only
+**Digital Garden Concept**
+- Content grows organically
+- Pages link to related pages
+- Not hierarchical - network-like
+- Always evolving, never "done"
 
-```bash
-npx quartz build
-```
+**Why It Works**
+- Find information through exploration
+- Discover connections you didn't know existed
+- Context builds naturally through links
+- Knowledge compounds over time
 
-Output goes to `public/` directory.
+## What's Inside
 
-## Content Management
+### Product Documentation
+- How to use our applications
+- Feature guides and tutorials
+- Common use cases
+- Troubleshooting tips
 
-### Adding New Pages
+### Best Practices
+- Development workflows
+- Design patterns
+- Security guidelines
+- Team processes
 
-1. Create a markdown file in `content/` directory:
-   ```bash
-   # content/my-new-page.md
-   ```
+### Reference Material
+- API documentation
+- Technical specifications
+- Architecture decisions
+- Tool configurations
 
-2. Add frontmatter:
-   ```markdown
-   ---
-   title: My New Page
-   tags:
-     - documentation
-     - guide
-   ---
+### Institutional Knowledge
+- Why we built things certain ways
+- Historical context
+- Lessons learned
+- Team conventions
 
-   # My New Page
+## Best Practices
 
-   Content goes here. Link to [[Other Page]].
-   ```
+### Finding Information
+- **Start with search** - Fastest way to find what you need
+- **Follow links** - Discover related content
+- **Check backlinks** - See what references this topic
+- **Use tags** - Find all pages about a topic
 
-3. Commit and push to `v4` branch:
-   ```bash
-   git add content/my-new-page.md
-   git commit -m "Add new page"
-   git push origin v4
-   ```
+### Reading Effectively
+- **Skim first** - Get the overview
+- **Follow relevant links** - Build context
+- **Bookmark key pages** - For quick reference later
+- **Check "last updated"** - Know if info is current
 
-### Editing with Obsidian
+### Contributing (for team members)
+- **Write in Obsidian** - Or any markdown editor
+- **Link liberally** - Connect related concepts
+- **Keep it current** - Update as things change
+- **One topic per page** - Stay focused
 
-QuarterlyKB can be edited directly in Obsidian:
+## Common Questions
 
-1. Open the `QuarterlyKB` folder in Obsidian
-2. Edit files in the `content/` directory
-3. Use Obsidian's linking features
-4. Commit changes via git
+**How do I find something specific?**
+Use the search bar - it searches all content instantly.
 
-## Linking
+**What are the [[double brackets]]?**
+Those are links between pages. Click them to jump to related content.
 
-### Internal Links
+**Is this kept up to date?**
+Yes - it's a living document. Check the "last updated" date on each page.
 
-Use wiki-style links:
-```markdown
-[[Page Name]]
-[[Page Name|Custom Text]]
-```
+**Can I suggest changes?**
+If you're on the team, you can edit directly. External users can contact us with suggestions.
 
-### External Links
+**Why is it called a 'digital garden'?**
+Unlike traditional docs that are structured like books, this grows organically like a garden - interconnected and always evolving.
 
-Standard markdown:
-```markdown
-[Link Text](https://example.com)
-```
+**What if a page is outdated?**
+Let us know! We update based on feedback and changes.
 
-## Deployment
+## Navigation Tips
 
-Automatically deploys to Cloudflare Pages when pushing to `v4` branch:
+### Quick Navigation
+- **Cmd/Ctrl + K**: Open search
+- **Click logo**: Return to home
+- **Use breadcrumbs**: Navigate up the hierarchy
+- **Graph view**: See all connections
 
-```bash
-git add .
-git commit -m "Update content"
-git push origin v4
-```
+### Finding Related Content
+- **Backlinks**: What pages link here?
+- **Tags**: What else has this tag?
+- **Graph**: Visual relationship explorer
+- **"See Also"**: Related pages
 
-## Project Structure
+### Mobile Usage
+- Full mobile-friendly design
+- Hamburger menu for sidebar
+- Search works great on mobile
+- Same content, optimized layout
 
-```
-QuarterlyKB/
-├── content/            # Markdown content
-│   ├── index.md       # Home page
-│   ├── guides/        # Guide pages
-│   └── reference/     # Reference docs
-├── quartz/            # Quartz framework
-├── quartz.config.ts   # Quartz configuration
-└── package.json
-```
+## Content Types
 
-## Configuration
+**Guides**: Step-by-step instructions
+**References**: Technical documentation
+**Concepts**: Explanations and context
+**Decision**: Why we chose X over Y
+**Process**: How we do recurring tasks
 
-Edit `quartz.config.ts` to customize:
+## Tips & Tricks
 
-- Site title and description
-- Theme colors
-- Navigation structure
-- Plugin configuration
-- Social links
+### Power User Moves
+- Search for partial terms
+- Use tags to explore topics
+- Check graph view for insights
+- Bookmark frequently-used pages
 
-## Features in Detail
+### Learning New Topics
+1. Search for the main concept
+2. Read the overview page
+3. Follow links to dive deeper
+4. Check backlinks for context
+5. Explore related tags
 
-### Git-Based Dating
-- Automatically tracks when pages were created/modified
-- Shows last updated date on each page
-- Based on git history
+### Staying Current
+- Subscribe to updates (if available)
+- Check "recently updated" section
+- Follow links from announcement pages
+- Bookmark key reference pages
 
-### Graph View
-- Visual representation of page relationships
-- Interactive graph navigation
-- Shows backlinks and connections
+## Understanding Structure
 
-### Search
-- Full-text search across all pages
-- Fast client-side search
-- Fuzzy matching
+**Not Hierarchical**
+- Content is networked, not tree-like
+- Multiple paths to the same information
+- Connections reveal relationships
+- Explore rather than navigate
 
-### Analytics
+**Organic Growth**
+- Pages added as needed
+- Links created naturally
+- Structure emerges from connections
+- Never "complete" - always evolving
 
-Uses Umami analytics:
-- Privacy-focused
-- No cookies
-- GDPR compliant
+**Git-Based**
+- Every change tracked
+- Full version history
+- See what changed when
+- Revert if needed
 
-## Content Best Practices
+## Getting the Most Value
 
-1. **Use descriptive titles**: Clear, concise page titles
-2. **Add tags**: Organize content with relevant tags
-3. **Link liberally**: Create connections between related pages
-4. **Write in markdown**: Keep formatting simple and readable
-5. **Commit often**: Regular commits track content evolution
+**For Learning**
+- Start with overview pages
+- Follow learning paths
+- Explore connections
+- Build mental models
 
-## Typography
+**For Reference**
+- Bookmark key pages
+- Use search liberally
+- Check for updates
+- Follow backlinks for context
 
-- **Font**: IBM Plex Mono
-- **Style**: Modern, monospace aesthetic
-- **Readability**: Optimized for technical documentation
-
-## Branding
-
-- Part of Quarterly Systems ecosystem
-- Consistent with company branding
-- "a K5M company" footer
-
-## Contributing
-
-1. Create content in `content/` directory
-2. Use Obsidian or text editor
-3. Commit to `v4` branch
-4. Push triggers auto-deployment
+**For Onboarding**
+- Read the "Start Here" section
+- Follow recommended reading paths
+- Explore topics you'll work with
+- Ask questions about unclear content
 
 ---
+
+**Status**: Live
+**Type**: Digital Garden / Living Documentation
+**Updated**: Continuously
 
 a **K5M** company

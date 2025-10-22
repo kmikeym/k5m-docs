@@ -1,147 +1,120 @@
 ---
-title: Quarterly Systems Landing
-description: Main landing page and marketing site for Quarterly Systems
+title: Quarterly Systems
+description: Business platform for modern operations
 ---
 
-# Quarterly Systems Landing
+# Quarterly Systems
 
-The main landing page and marketing site for the Quarterly Systems platform. Features an animated timeline, product showcase, and real-time status dashboard.
+**Live at**: https://quarterly.systems
 
-## Overview
+The main hub for the Quarterly Systems platform - discover our applications, check operational status, and learn about the company.
 
-- **URL**: https://quarterly.systems
-- **Tech**: Astro 5.14.1, Tailwind CSS, anime.js
-- **Deploy**: Cloudflare Pages (auto-deploy on push to `main`)
+## What You'll Find
 
-## Features
+### Applications Overview (/apps)
 
-### Animated Timeline
-- Interactive timeline showcasing company milestones
-- Smooth animations using anime.js
-- Responsive design for mobile and desktop
+Browse all Quarterly Systems products in one place:
+- **Comms & Knowledge**: Team communication and documentation
+- **Status & Analytics**: Operational transparency and health tracking
+- **Quarterly Labs**: Experimental projects and prototypes
 
-### Apps Showcase
-- Featured products grid on `/apps` page
-- Links to all Quarterly Systems products
-- Consistent branding across all projects
+Each application links directly from this page.
 
-### Status Dashboard
-- Real-time transparency dashboard at `/status`
-- Powered by Status API Worker
-- Shows GitHub activity, RSS feeds, location data
-- Immutable activity history
+### Operational Status (/status)
 
-### Admin Features
-- Location tagging interface at `/admin/location`
-- Activity management
-- Real-time updates
+Real-time transparency into our operations:
+- **Activity Feed**: Recent updates and development activity
+- **Location**: Where work is happening
+- **System Health**: Current operational status
+- **History**: Past activity and changes
 
-## Installation
+This page updates automatically - no refresh needed.
 
-```bash
-# Clone the repository
-git clone [repository-url]
+### Company Information (/about)
 
-# Navigate to the project
-cd quarterly-systems-landing
+Learn about Quarterly Systems:
+- Mission and vision
+- Company values
+- Team information
+- Contact details
 
-# Install dependencies
-npm install
+### Waitlist (/waitlist)
 
-# Start development server
-npm run dev  # Runs on :4321
-```
+Join the waitlist for early access to new products and features.
 
-## Development
+## How to Navigate
 
-### Local Development
+**Homepage**
+- See company overview
+- Quick links to all sections
+- Latest updates and announcements
 
-```bash
-npm run dev
-```
+**Apps Page**
+- Browse all applications
+- Click through to try them
+- See what's in beta vs. live
 
-Opens on http://localhost:4321 with hot reload.
+**Status Dashboard**
+- Check current status
+- See what we're working on
+- Track our activity
 
-### Building for Production
+## What Makes It Different
 
-```bash
-npm run build
-```
+**Radical Transparency**
+- Public status dashboard
+- Real activity feed
+- No hiding behind status pages
 
-Output goes to `dist/` directory.
+**Integrated Platform**
+- All apps work together
+- Consistent experience
+- Unified navigation
 
-### Deployment
+**Continuous Evolution**
+- Regular updates
+- New features added often
+- Labs for experiments
 
-Automatically deploys to Cloudflare Pages on push to `main` branch.
+## Getting Started
 
-## Project Structure
+1. **Visit** https://quarterly.systems
+2. **Explore /apps** to see what's available
+3. **Try the products** that interest you
+4. **Check /status** to see what's new
 
-```
-quarterly-systems-landing/
-├── src/
-│   ├── pages/          # Astro pages
-│   │   ├── index.astro # Home page
-│   │   ├── apps.astro  # Products showcase
-│   │   └── status.astro # Status dashboard
-│   ├── components/     # Reusable components
-│   └── styles/         # Global styles
-├── public/             # Static assets
-│   └── labs/k5m/       # Lab experiments
-├── worker/             # Status API Worker
-└── package.json
-```
+## Common Questions
 
-## Status API Worker
+**What is Quarterly Systems?**
+A suite of business applications focused on transparency, collaboration, and rapid iteration.
 
-The Status API powers the real-time dashboard.
+**Which product should I start with?**
+- Need documentation? → Knowledge Base
+- Want to track news? → Vibe News
+- Tracking health? → Body Electric
+- Building prototypes? → VibeCode (in Labs)
 
-### Features
-- Aggregates GitHub activity
-- Fetches RSS feeds
-- Tracks location data
-- KV-based caching (30-minute TTL)
-- Cron refresh every 10 minutes
+**Is this free?**
+Most products are free during beta. Pricing will be announced as products move to production.
 
-### Deployment
+**How do I get updates?**
+Join the waitlist at /waitlist or check the status dashboard regularly.
 
-```bash
-cd worker
-wrangler deploy
-```
+**Can I see what you're working on?**
+Yes! The /status page shows our activity in real-time.
 
-**API URL**: https://status-api.quarterly.systems
+## Quick Links
 
-## Branding
-
-- **Colors**: Purple/blue schemes
-- **Typography**: Modern, clean fonts
-- **Footer**: "a K5M company" attribution
-- **Navigation**: Consistent across all products
-
-## Cross-Project Integration
-
-The landing page links to all Quarterly Systems products:
-- Knowledge Base → https://base.quarterly.systems
-- VibeCode → https://vibecode.quarterly.systems
-- Office Communications → https://office.quarterly.systems
-- Body Electric → https://body.quarterly.systems
-- Vibe News → https://news.quarterly.systems
-- GitHub Graph Spider → https://graph.quarterly.systems
-
-## Key Files
-
-- `src/pages/apps.astro` - Products showcase
-- `src/pages/status.astro` - Status dashboard
-- `src/pages/admin/location.astro` - Admin interface
-- `worker/status-api.js` - API worker
-
-## Contributing
-
-1. Make changes to `src/` files
-2. Test locally with `npm run dev`
-3. Commit and push to `main`
-4. Auto-deploys to Cloudflare Pages
+- **Apps**: https://quarterly.systems/apps
+- **Status**: https://quarterly.systems/status
+- **About**: https://quarterly.systems/about
+- **Knowledge Base**: https://base.quarterly.systems
+- **Documentation**: https://docs.quarterly.systems
 
 ---
+
+**Status**: Live
+**Platform**: Web
+**Updates**: Continuous
 
 a **K5M** company

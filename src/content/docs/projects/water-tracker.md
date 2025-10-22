@@ -1,162 +1,193 @@
 ---
 title: Water Tracker
-description: Local-first hydration tracking application
+description: Stay hydrated with simple water intake tracking
 ---
 
 # Water Tracker
 
-A local-first water intake tracking application to help you stay hydrated throughout the day. Available as a web app, desktop application, and CLI tool.
+**Local app** - Desktop, CLI, and Web interfaces
 
-## Overview
+A simple, beautiful water intake tracker that helps you build the hydration habit.
 
-Water Tracker helps you maintain healthy hydration habits with:
+## What It Does
 
-- 💧 Track daily water intake in ounces
-- 📊 Visual progress indicators
-- 🔥 Daily streak tracking
-- 🎯 Customizable daily goals
-- 💾 Local data storage (no cloud required)
+Tracks your daily water consumption with a clean interface, progress indicators, and streak tracking to help you drink enough water every day.
 
-## Installation
+No servers, no accounts, no complexity - just a local app that helps you stay hydrated.
 
-```bash
-# Clone the repository
-git clone https://github.com/kmikeym/water
+## Who It's For
 
-# Navigate to the project
-cd water
+- **Health-conscious individuals** building better hydration habits
+- **Athletes** tracking water intake for performance
+- **Office workers** who forget to drink water
+- **Anyone** who wants to drink more water
 
-# Install dependencies
-bun install
-```
-
-## Usage
-
-### Web App
-
-Start the development server:
-
-```bash
-bun run dev
-```
-
-Then open http://localhost:3000 in your browser.
+## How to Use It
 
 ### Desktop App
 
-Launch the Electron-based desktop application:
+**macOS Users:**
+1. Download and open the Water Tracker app
+2. Double-click to launch
+3. Enter glasses of water consumed
+4. Watch your progress fill up
 
+### Command Line
+
+**For Terminal Users:**
 ```bash
-bun run dev:desktop
-```
+# Add water (8 oz glass)
+water add
 
-Or build a standalone executable:
-
-```bash
-bun run build:desktop
-```
-
-### CLI Tool
-
-Build the CLI executable:
-
-```bash
-bun run build:cli
-```
-
-Use the CLI commands:
-
-```bash
-# Add water intake
-./water add 16
-
-# Check today's status
-./water status
+# Check status
+water status
 
 # View history
-./water history
+water history
 
 # Set daily goal
-./water goal 80
-
-# Show help
-./water help
+water goal 8
 ```
 
-## Features
+### Understanding Progress
 
-### Quick Add Buttons
+**Daily Goal**
+- Default: 8 glasses (64 oz)
+- Customizable to your needs
+- Resets every day at midnight
 
-Tap to quickly add common amounts:
-- 8 oz (Glass)
-- 12 oz (Small Bottle)
-- 16 oz (Water Bottle)
-- 20 oz (Large Bottle)
+**Progress Bar**
+- Visual indicator of daily progress
+- Fills up as you log water
+- Color changes when you hit your goal
 
-### Progress Tracking
+**Streak Tracking**
+- Counts consecutive days meeting your goal
+- Resets if you miss a day
+- Motivates consistency
 
-- Circular progress indicator
-- Percentage of daily goal
-- Color changes when goal is reached
-- Celebration animation on goal completion
+## Best Practices
 
-### History & Entries
+### Building the Habit
+- **Set reminders** - Use your phone or computer
+- **Link to existing habits** - Drink water after coffee, meals, etc.
+- **Keep water visible** - Bottle on your desk
+- **Track immediately** - Log it right after drinking
 
-- Timestamped entries
-- Delete individual entries
-- Reset daily data
-- View past 14 days
+### Daily Routine
+- **Morning**: 1-2 glasses upon waking
+- **With meals**: 1 glass before/during each meal
+- **Exercise**: Extra 2-3 glasses
+- **Evening**: Taper off before bed
 
-### Streak System
+### Goal Setting
+- **Minimum**: 8 glasses (64 oz) for most people
+- **Active lifestyle**: 10-12 glasses (80-96 oz)
+- **Hot weather/exercise**: 12-15 glasses (96-120 oz)
+- **Adjust based on**: Activity level, climate, body size
 
-- Track consecutive days meeting your goal
-- Visual calendar showing completed days
-- Motivational streak counter
+## Common Questions
 
-## Data Storage
+**How much water should I drink?**
+General guideline is 8 glasses (64 oz), but needs vary. Factors include exercise, climate, body size, and diet.
 
-- **Web App**: Browser localStorage
-- **Desktop App**: Electron localStorage
-- **CLI**: `~/.water-tracker/data.json`
+**What counts as "water"?**
+Plain water is best, but you can count:
+- Herbal tea
+- Sparkling water
+- Water with lemon/lime
 
-Web and Desktop apps share data. CLI uses a separate file for portability.
+Don't count:
+- Coffee (diuretic)
+- Soda
+- Juice
+- Alcohol
 
-## Tech Stack
+**What if I miss a day?**
+Your streak resets, but just start again tomorrow. Consistency over time matters more than perfection.
 
-- **Runtime**: Bun
-- **Language**: TypeScript
-- **Web**: Vanilla HTML/CSS/JS
-- **Desktop**: Electron
-- **CLI**: Compiled Bun executable
+**Is my data stored in the cloud?**
+No! Everything stays on your computer. Complete privacy, no sync.
 
-## Project Structure
+**Can I change the glass size?**
+Currently assumes 8 oz glasses. You can adjust your goal count to match your actual glass size.
 
-```
-water/
-├── index.html          # Web app HTML
-├── styles.css          # Styles
-├── app.ts              # Web app logic
-├── index.ts            # Bun server
-├── cli.ts              # CLI app
-├── water               # CLI executable
-├── electron-main.js    # Electron main process
-├── electron-preload.js # Electron preload
-└── package.json        # Config
-```
+## Tips & Tricks
 
-## Contributing
+### Making It Easier
+- **Bigger bottle**: Use a 32 oz bottle = 4 glasses at once
+- **Time markers**: Get bottles with hourly targets
+- **Temperature preference**: Ice cold or room temp - whatever you'll actually drink
+- **Flavor it**: Add fruit, cucumber, or mint if plain water is boring
 
-Contributions are welcome! Please:
+### Staying Consistent
+- **Morning ritual**: Two glasses before coffee
+- **Desk setup**: Keep a full water bottle always visible
+- **Bathroom cue**: Refill every time you go
+- **Meeting habit**: Drink during calls
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+### Health Benefits to Notice
+- More energy (1-2 weeks)
+- Clearer skin (2-4 weeks)
+- Better digestion (immediate)
+- Fewer headaches (1 week)
+- Improved focus (immediate)
 
-## License
+### Tracking Hacks
+- Log water in batches (refill = 3 glasses)
+- Use the CLI for quick logging
+- Check status before bed
+- Celebrate streaks!
 
-Open source - see repository for details.
+## Understanding Your Needs
+
+**Signs You Need More Water:**
+- Dark yellow urine
+- Dry mouth
+- Headaches
+- Fatigue
+- Dizziness
+
+**Signs You're Drinking Enough:**
+- Light yellow/clear urine
+- Consistent energy
+- No thirst between drinks
+- Good skin elasticity
+
+**Don't Overdo It:**
+- Drinking too much can be harmful
+- Spread intake throughout the day
+- Listen to your body
+- Clear urine all day = might be drinking too much
+
+## Progress Tracking
+
+**Daily View**
+- Current intake vs. goal
+- Progress percentage
+- Glasses remaining
+
+**Streak View**
+- Current streak count
+- Best streak record
+- Motivation to keep going
+
+**History**
+- Past days' consumption
+- Patterns and trends
+- Accountability check
+
+## Making It a Habit
+
+**Week 1**: Focus on tracking, don't worry about hitting goals
+**Week 2**: Aim for 50-75% of goal consistently
+**Week 3**: Hit your goal most days
+**Week 4+**: Maintain and adjust as needed
 
 ---
+
+**Platform**: macOS Desktop App + CLI
+**Privacy**: 100% local - no cloud, no accounts
+**Free forever**
 
 a **K5M** company

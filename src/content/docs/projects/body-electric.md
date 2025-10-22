@@ -1,259 +1,139 @@
 ---
 title: The Body Electric
-description: EWMA-based weight trend tracker with calorie calculations
+description: Smart weight tracking that reveals true trends
 ---
 
 # The Body Electric
 
-An intelligent weight tracking application using Exponentially Weighted Moving Average (EWMA) to smooth daily fluctuations and reveal true trends.
+**Live at**: https://body.quarterly.systems
 
-## Overview
+A weight tracking app that cuts through daily fluctuations to show you what's really happening with your weight trends.
 
-- **URL**: https://body.quarterly.systems
-- **Tech**: React 18, TypeScript, Vite, Fireproof, Recharts, Tailwind CSS
-- **Deploy**: Cloudflare Pages (auto-deploy on push to `main`)
-- **Status**: Live
+## What It Does
 
-## Features
+Most weight apps frustrate you with daily ups and downs caused by water retention, meal timing, and other noise. The Body Electric uses statistical smoothing (EWMA) to reveal your *actual* weight trend, helping you make better decisions about diet and fitness.
 
-### EWMA Weight Tracking
-- Smooths daily weight fluctuations
-- Reveals true weight trends
-- Configurable smoothing parameters
-- Statistical analysis
+It also estimates your calorie surplus or deficit based on trend changes, giving you actionable insights without complicated food logging.
 
-### Calorie Delta Calculations
-- Estimates calorie surplus/deficit
-- Based on weight trend changes
-- Helps with diet planning
-- Visual feedback
+## Who It's For
 
-### Local-First Database
-- Fireproof database with IndexedDB
-- All data stays on your device
-- No cloud synchronization required
-- Privacy-focused
+- **Anyone tracking weight** who's tired of seeing random daily swings
+- **Fitness enthusiasts** who want to understand true progress
+- **People on diets** who need accurate feedback on what's working
+- **Data-minded individuals** who appreciate science-based metrics
 
-### Visual Analytics
-- Recharts-based visualizations
-- Weight trend graphs
-- Calorie delta charts
-- Historical data views
+## How to Use It
 
-## Installation
+### Daily Weigh-Ins
 
-```bash
-# Clone the repository
-git clone [repository-url]
+1. Visit https://body.quarterly.systems
+2. Weigh yourself at the same time each day (morning is best)
+3. Enter your weight
+4. Check your trend line, not the daily number
 
-# Navigate to the project
-cd the-body-electric
+### Understanding the Charts
 
-# Install dependencies (requires --legacy-peer-deps)
-npm install --legacy-peer-deps
+**Raw Weight** (the bumpy line)
+- Your actual daily measurements
+- Will jump around - this is normal
+- Don't make decisions based on this alone
 
-# Start development server
-npm run dev  # Runs on :5173
-```
+**Trend Weight** (the smooth line)
+- Your statistical "true" weight
+- Filters out water weight and fluctuations
+- Use this to track real progress
 
-## Development
+**Calorie Delta**
+- Estimated daily calorie surplus/deficit
+- Based on trend changes, not daily jumps
+- Helps adjust your diet without counting every calorie
 
-### Local Development
+### Reading Your Progress
 
-```bash
-npm run dev
-```
-
-Opens on http://localhost:5173 with hot reload.
-
-### Building
-
-```bash
-npm run build
-```
-
-### Important Note
-
-This project requires the `--legacy-peer-deps` flag for npm install due to dependency constraints.
-
-## Deployment
-
-Automatically deploys to Cloudflare Pages on push to `main` branch:
-
-```bash
-git add .
-git commit -m "Update features"
-git push  # Auto-deploys
-```
-
-## EWMA Algorithm
-
-### What is EWMA?
-
-Exponentially Weighted Moving Average (EWMA) is a statistical method that:
-- Gives more weight to recent data
-- Smooths out random fluctuations
-- Reveals underlying trends
-- Responds to actual changes
-
-### Parameters
-
-See `the-body-electric/CLAUDE.md` for detailed EWMA parameters and configuration.
-
-### Benefits
-
-- **Reduces noise**: Daily fluctuations don't affect the trend
-- **Accurate trends**: See real progress, not water weight
-- **Responsive**: Adapts to actual weight changes
-- **Scientific**: Based on proven statistical methods
-
-## Calorie Calculations
-
-### How It Works
-
-1. Track weight changes over time
-2. Calculate trend using EWMA
-3. Estimate calorie delta based on trend
-4. Provide actionable insights
-
-### Formulas
-
-- Weight change → Calorie estimate
-- 1 lb ≈ 3,500 calories
-- Trend-based calculations
-- Daily and weekly averages
-
-## Data Privacy
-
-### Local-First Architecture
-- All data stored locally in IndexedDB
-- No server uploads
-- No cloud synchronization
-- Complete privacy
-
-### Data Persistence
-- Fireproof database
-- Automatic local storage
-- Export/import capabilities
-- Backup support
-
-## Project Structure
-
-```
-the-body-electric/
-├── src/
-│   ├── components/     # React components
-│   ├── hooks/          # Custom hooks
-│   ├── utils/          # EWMA calculations
-│   └── styles/         # Tailwind styles
-├── public/             # Static assets
-└── package.json
-```
-
-## Tech Stack Details
-
-### React 18
-- Modern React features
-- Functional components
-- Hooks-based architecture
-- Concurrent rendering
-
-### TypeScript
-- Full type safety
-- Strict mode enabled
-- Type-safe calculations
-- Better developer experience
-
-### Vite
-- Fast build tool
-- Hot module replacement
-- Optimized production builds
-- Modern dev server
-
-### Fireproof
-- Local-first database
-- IndexedDB storage
-- Type-safe queries
-- Real-time updates
-
-### Recharts
-- React charting library
-- Beautiful visualizations
-- Responsive charts
-- Customizable themes
-
-### Tailwind CSS
-- Utility-first CSS
-- Responsive design
-- Dark mode support
-- Custom theming
-
-## Features in Detail
-
-### Weight Entry
-- Quick daily weight logging
-- Multiple units support (lb, kg)
-- Timestamp tracking
-- Edit/delete entries
-
-### Trend Visualization
-- Line charts showing trends
-- Raw weight vs EWMA
-- Customizable time ranges
-- Zoom and pan capabilities
-
-### Calorie Insights
-- Daily calorie delta
-- Weekly averages
-- Goal tracking
-- Progress indicators
-
-### Statistics
-- Current weight
-- Trend weight
-- Rate of change
-- Time to goal
-
-## Configuration
-
-Edit configuration in source files:
-- EWMA parameters in utils
-- Chart styling in components
-- Database schema in Fireproof config
-- Tailwind theme in config file
+✅ **Trend going down steadily?** Your diet is working
+❌ **Daily weight up but trend down?** Just water - stay the course
+⚠️ **Trend plateauing?** Time to adjust your approach
+📈 **Trend matches your goal?** You're dialed in perfectly
 
 ## Best Practices
 
-1. **Weigh consistently**: Same time each day
-2. **Don't panic**: Daily fluctuations are normal
-3. **Trust the trend**: EWMA reveals the truth
-4. **Track regularly**: More data = better trends
-5. **Be patient**: Trends emerge over time
+### Weighing Yourself
+- **Same time daily** - First thing in the morning after bathroom
+- **Same conditions** - Before eating, after bathroom, minimal clothing
+- **Don't skip days** - More data = better trends
+- **Ignore single days** - Only the trend matters
 
-## Contributing
+### Using the Data
+- **Wait 1-2 weeks** before judging if something is working
+- **Trust the trend** over how you feel day-to-day
+- **Adjust based on trend** not daily fluctuations
+- **Be patient** - Real changes take time to show
 
-1. Fork the repository
-2. Make changes
-3. Test locally with `npm run dev`
-4. Commit and push
-5. Create pull request
+### Goal Setting
+- Healthy weight loss: 1-2 lbs per week (trend)
+- Maintenance: Trend stays flat
+- Muscle gain: Slow upward trend (0.5-1 lb/week)
 
-## Architecture
+## Common Questions
 
-See `the-body-electric/CLAUDE.md` for:
-- Detailed EWMA parameters
-- Database schema
-- Component architecture
-- State management patterns
+**Why does my weight jump around so much?**
+Water retention, food in your system, sodium intake, and hormones all cause daily swings of 2-5 lbs. That's normal!
 
-## Future Features
+**How long until I see my trend?**
+You'll see a trend line immediately, but wait 5-7 days for it to become meaningful.
 
-- Goal setting
-- Milestone tracking
-- Data export
-- Multiple user profiles
-- Advanced analytics
+**What if I miss a day?**
+Not ideal, but the trend will still work. Just weigh yourself as soon as you remember.
+
+**Is my data private?**
+Yes! Everything stays on your device in your browser. No cloud sync, no accounts, complete privacy.
+
+**Can I use pounds or kilograms?**
+Both are supported - choose your preferred unit.
+
+**What's EWMA?**
+Exponentially Weighted Moving Average - a statistical method that smooths noisy data while staying responsive to real changes. You don't need to understand it for it to work!
+
+## Tips & Tricks
+
+### Don't Panic About
+- 2-3 lb daily swings (especially for women during monthly cycles)
+- Weight going up after salty meals
+- Higher weight after intense workouts (muscle inflammation)
+- Weekend weight spikes (usually water)
+
+### Do Pay Attention To
+- Trend direction over 1-2 weeks
+- Trend speed (is it too fast or too slow?)
+- Calorie delta matching your goals
+- How you feel + what the trend shows
+
+### Advanced Usage
+- Take body measurements weekly (waist, etc.) as another data point
+- Note workouts/diet changes to correlate with trend shifts
+- Screenshot trends to track long-term progress
+- Export data if you want to analyze elsewhere
+
+## Making Adjustments
+
+**If trend isn't moving and you want to lose weight:**
+- Reduce daily calories by 200-300
+- Wait 2 weeks to see trend response
+- Adjust again if needed
+
+**If trend is dropping too fast (>2 lbs/week):**
+- Increase calories slightly
+- Ensure you're eating enough protein
+- Consider if it's sustainable
+
+**If trend is perfect:**
+- Don't change anything!
+- Keep doing what's working
 
 ---
+
+**Status**: Live
+**Privacy**: 100% local - your data never leaves your browser
+**Free forever**
 
 a **K5M** company
